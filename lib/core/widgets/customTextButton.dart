@@ -6,7 +6,7 @@ class CustomTextButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.onPressed,
-    this.color = AppColors.gray,
+    this.color = AppColors.primary,
   });
   final String text;
   final VoidCallback onPressed;

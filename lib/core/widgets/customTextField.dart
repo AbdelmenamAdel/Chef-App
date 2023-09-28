@@ -44,8 +44,8 @@ class CustomTextField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          height: 50,
-          width: width,
+          // height: 50,
+          // width: width,
           child: TextFormField(
             readOnly: readOnly,
             onTap: onTap,
@@ -67,24 +67,6 @@ class CustomTextField extends StatelessWidget {
               hintText: hintText,
               hintStyle: TextStyle(fontSize: 16.sp, color: AppColors.gray),
               labelText: labelText,
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(4),
-                borderSide: const BorderSide(
-                  color: AppColors.gray,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(4),
-                borderSide: const BorderSide(
-                  color: AppColors.primary,
-                ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(4),
-                borderSide: const BorderSide(
-                  color: AppColors.red,
-                ),
-              ),
             ),
             obscureText: isPassword,
             onChanged: onChange,

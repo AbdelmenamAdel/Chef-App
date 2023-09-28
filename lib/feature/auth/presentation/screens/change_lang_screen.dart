@@ -1,4 +1,4 @@
-import 'package:chef/core/extensions/extension.dart';
+import 'package:chef/core/common/navigate.dart';
 import 'package:chef/core/locale/app_locale.dart';
 import 'package:chef/core/utils/app_colors.dart';
 import 'package:chef/core/utils/app_images.dart';
@@ -34,14 +34,14 @@ class ChangeLangScreen extends StatelessWidget {
                   boxFit: BoxFit.none,
                 ),
                 SizedBox(
-                  height: 16.sp,
+                  height: 16.h,
                 ),
                 Text(
                   'chLangTitle'.tr(context),
                   style: Theme.of(context).textTheme.displayLarge,
                 ),
                 SizedBox(
-                  height: 54.sp,
+                  height: 54.h,
                 ),
                 Text(
                   'chLangSubTitle'.tr(context),
@@ -49,7 +49,7 @@ class ChangeLangScreen extends StatelessWidget {
                   style: Theme.of(context).textTheme.displayMedium,
                 ),
                 SizedBox(
-                  height: 120.sp,
+                  height: 120.h,
                 ),
                 BlocBuilder<GlobalCubit, GlobalState>(
                   builder: (context, state) {

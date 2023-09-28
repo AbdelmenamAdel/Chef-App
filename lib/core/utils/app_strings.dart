@@ -11,6 +11,7 @@ class AppStrings {
   static const String signIn = 'signIn';
   static const String signUp = 'signUp';
   static const String dntHaveAcc = 'dntHaveAcc';
+  static const String alHaveAcc = 'alHaveAcc';
   static const String fPassword = 'fPassword';
   static const String fPTitle = 'fPTitle';
   static const String sendCode = 'sendCode';
@@ -36,4 +37,17 @@ class AppStrings {
   static const String number = 'number';
   static const String category = 'category';
   static const String quantity = 'quantity';
+  static const String validEmail = 'validEmail';
+  static const String emailN = 'emailN';
+  static const String validPassword = 'validPassword';
+  static const String validPassword6 = 'validPassword6';
+  static const String loginSuccessfully = 'loginSuccessfully';
+  static const String sendCodeSuccessfully = 'sendCodeSuccessfully';
+  static const String musntBMt = 'musntBMt';
+  static const String dsntTheSamePassword = 'dsntTheSamePassword';
+  static const String validCode = 'validCode';
+  static const String validcode = 'wrong code';
+  static const String person = 'person';
+  static const String menu = 'menu';
+  static const String changedSuccessfully = 'changedSuccessfully';
 }

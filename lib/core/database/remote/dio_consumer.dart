@@ -116,6 +116,8 @@ class DioConsymer extends ApiConsumer {
           case 409:
             throw ConflictException(
                 ErrorModel.fromJson(e.response!.data)); //* conflict
+          default:
+            throw ServerException(ErrorModel.fromJson(e.response!.data));
         }
       case DioExceptionType.cancel:
         throw CancelException(ErrorModel.fromJson(e.response!.data));

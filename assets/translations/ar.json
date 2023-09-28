@@ -35,5 +35,18 @@
     "price":"السعر",
     "number":"رقم",
     "category":"الصنف",
-    "quantity":"الكمية"
+    "quantity":"الكمية",
+    "validEmail":"من فضلك ادخل إيميل صالح",
+    "validPassword":"من فضلك ادخل كلمة مرور صالحة",
+    "validPassword6":"كلمة المرور لا يجب ان تقل عن 6 حروف",
+    "loginSuccessfully":"تم تسجيل الدخول بنجاح",
+    "emailN":"من فضلك أدخل الإيميل الخاص بك",
+    "alHaveAcc":" أمتلك حساب بالفعل",
+    "musntBMt":"لا يجب أن يكون فارغ",
+    "dsntTheSamePassword":"الباسورد غير متطابق",
+    "sendCodeSuccessfully":"تفقد إيميلك",
+    "validCode":"من فضلك أدخل رقم كود صالح",
+    "changedSuccessfully":"تم تغيير الباسورد بنجاح",
+    "person":"الملف الشخصي",
+    "menu":"المينيو"
 }

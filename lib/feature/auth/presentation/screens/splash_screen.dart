@@ -1,4 +1,6 @@
-import 'package:chef/core/extensions/extension.dart';
+import 'package:chef/core/common/navigate.dart';
+import 'package:chef/core/database/cache/cache_helper.dart';
+import 'package:chef/core/database/remote/end_point.dart';
 import 'package:chef/core/locale/app_locale.dart';
 import 'package:chef/core/routes/app_routs.dart';
 import 'package:chef/core/utils/app_colors.dart';
@@ -8,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/services/service_locator.dart';
 import '../../../../core/widgets/custom_Image.dart';
 import '../cubits/chef/chef_cubit.dart';
 import '../cubits/chef/chef_state.dart';
@@ -28,8 +31,10 @@ class _SplashScreenState extends State<SplashScreen> {
         seconds: 3,
       ),
     ).then(
-      (value) {
-        context.toView(Routes.chageLang);
+      (value) async {
+        await sl<CacheHelper>().getData(key: Apikeys.token) == null
+            ? context.toView(Routes.chageLang)
+            : context.toView(Routes.home);
       },
     );
   }

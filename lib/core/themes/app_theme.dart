@@ -7,18 +7,17 @@ import '../utils/app_colors.dart';
 ThemeData getAppTheme() {
   return ThemeData(
     primaryColor: AppColors.primary,
-    //scaffoldBackgroundColor
+    //!scaffoldBackgroundColor
     scaffoldBackgroundColor: AppColors.white,
     //appBar theme
     appBarTheme: const AppBarTheme(
       backgroundColor: AppColors.primary,
     ),
-//! Text
+    //! Text
     textTheme: TextTheme(
       displayLarge: boldStyle(),
       displayMedium: regularStyle(),
     ),
-
     //button theme
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -29,14 +28,23 @@ ThemeData getAppTheme() {
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
-      enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(8),
-      ),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
+        borderSide: const BorderSide(
+          color: AppColors.gray,
+        ),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: const BorderSide(
+          color: AppColors.red,
+        ),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
+        borderSide: const BorderSide(
+          color: AppColors.primary,
+        ),
       ),
       hintStyle: regularStyle(color: AppColors.gray, fontSize: 16.sp),
     ),

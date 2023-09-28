@@ -10,9 +10,9 @@ class CustomButton extends StatelessWidget {
       {super.key,
       required this.onPressed,
       this.iconData,
-      this.height,
+      this.height = 50,
       required this.text,
-      this.width,
+      this.width = 140,
       this.backgroundColor = AppColors.primary});
   @required
   String text;
@@ -25,8 +25,8 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: height ?? (height = 48.h),
-      width: width ?? (width = 140.w),
+      height: height!.h,
+      width: width!.w,
       child: ElevatedButton(
         onPressed: onPressed,
         style: Theme.of(context).elevatedButtonTheme.style!.copyWith(

@@ -2,15 +2,16 @@ import 'package:chef/feature/auth/presentation/screens/login_screen.dart';
 import 'package:chef/feature/auth/presentation/screens/change_lang_screen.dart';
 import 'package:chef/feature/auth/presentation/screens/reset_password.dart';
 import 'package:chef/feature/auth/presentation/screens/send_code_screen.dart';
+import 'package:chef/feature/auth/presentation/screens/splash_screen.dart';
 import 'package:chef/feature/menu/presentation/screens/add_meal_screen.dart';
 import 'package:chef/feature/menu/presentation/screens/menu_screen.dart';
 import 'package:chef/feature/profile/presentation/screens/change_password_screen.dart';
 import 'package:chef/feature/profile/presentation/screens/profile_home_screen.dart';
 import 'package:chef/feature/profile/presentation/screens/settings_screen.dart';
 import 'package:chef/feature/profile/presentation/screens/update_profile_screen.dart';
+import '../../feature/auth/presentation/screens/sign_up.dart';
+import '../../feature/home/screens/home_screen.dart';
 import 'package:flutter/material.dart';
-
-import '../../feature/auth/presentation/screens/splash_screen.dart';
 
 class Routes {
   static const String initialRoute = '/';
@@ -24,6 +25,8 @@ class Routes {
   static const String updateProfile = '/updateProfile';
   static const String settings = '/settings';
   static const String changePassword = '/changePassword';
+  static const String signUp = '/signUp';
+  static const String home = '/home';
 }
 
 class AppRoutes {
@@ -51,6 +54,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const MenuScreen());
       case Routes.changePassword:
         return MaterialPageRoute(builder: (_) => const ChangePasswordScreen());
+      case Routes.signUp:
+        return MaterialPageRoute(builder: (_) => const SignUpScreen());
+      case Routes.home:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(

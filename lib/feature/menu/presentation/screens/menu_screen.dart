@@ -6,11 +6,8 @@ class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Column(
-        children: [
-          Text('Menu'),
-        ],
-      ),
-    );
+        body: Center(
+      child: Text('Menu'),
+    ));
   }
 }

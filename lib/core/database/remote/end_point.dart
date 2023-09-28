@@ -12,6 +12,7 @@ class EndPoints {
   static const String updateMeal = 'chef/update-meal/';
   static const String getAllMeal = 'meal/get-meals';
   static const String deleteMeal = 'meal/delete-meal/';
+  static const String signUp = 'chef/signup';
 
   static String getChefDataEndPoints(String id) {
     return '$chefGet$id';
@@ -28,7 +29,15 @@ class EndPoints {
 
 class Apikeys {
   static const String email = 'email';
+  static const String name = 'name';
+  static const String confirmPassword = 'confirmPassword';
   static const String password = 'password';
+  static const String phone = 'phone';
+  static const String code = 'code';
+  static const String brandName = 'brandName';
+  // static const String frontId = 'frontId';
+  // static const String backId = 'backId';
+  // static const String profilPic = 'profilPic';
   static const String message = 'message';
   static const String token = 'token';
 }

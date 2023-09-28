@@ -35,5 +35,18 @@
     "price":"Price",
     "number":"Number",
     "category":"Category",
-    "quantity":"Quantity"
+    "quantity":"Quantity",
+    "validEmail":"Please enter a valid email address",
+    "emailN":"Please enter your email",
+    "validPassword":"Please enter a valid Password",
+    "validPassword6":"Password must be at least 6 characters long",
+    "loginSuccessfully":"Signed in Successfully",
+    "alHaveAcc":"already have an account ",
+    "musntBMt":"mustn't be empty",
+    "dsntTheSamePassword":"check that they are the same password",
+    "sendCodeSuccessfully":"check your email",
+    "validCode":"please enter a valid code number",
+    "changedSuccessfully":"the password had been changed successfully",
+    "person":"Profile",
+    "menu":"Menu"
 }
