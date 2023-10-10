@@ -61,10 +61,12 @@ class ChangeLangScreen extends StatelessWidget {
                             context.toView(Routes.login);
                           },
                           text: 'arabic'.tr(context),
+                          width: 140,
                           backgroundColor: AppColors.black,
                         ),
                         const Spacer(),
                         CustomButton(
+                          width: 140,
                           onPressed: () {
                             BlocProvider.of<GlobalCubit>(context).getLang('en');
                             context.toView(Routes.login);

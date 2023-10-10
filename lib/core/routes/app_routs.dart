@@ -3,7 +3,6 @@ import 'package:chef/feature/auth/presentation/screens/change_lang_screen.dart';
 import 'package:chef/feature/auth/presentation/screens/reset_password.dart';
 import 'package:chef/feature/auth/presentation/screens/send_code_screen.dart';
 import 'package:chef/feature/auth/presentation/screens/splash_screen.dart';
-import 'package:chef/feature/menu/presentation/screens/add_meal_screen.dart';
 import 'package:chef/feature/menu/presentation/screens/menu_screen.dart';
 import 'package:chef/feature/profile/presentation/screens/change_password_screen.dart';
 import 'package:chef/feature/profile/presentation/screens/profile_home_screen.dart';
@@ -12,6 +11,8 @@ import 'package:chef/feature/profile/presentation/screens/update_profile_screen.
 import '../../feature/auth/presentation/screens/sign_up.dart';
 import '../../feature/home/screens/home_screen.dart';
 import 'package:flutter/material.dart';
+
+import '../../feature/menu/presentation/screens/add_meal_screen.dart';
 
 class Routes {
   static const String initialRoute = '/';

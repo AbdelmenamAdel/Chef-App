@@ -26,12 +26,12 @@ class GNavComponent extends StatelessWidget {
           },
           tabs: [
             GButton(
-              icon: Icons.person,
-              text: AppStrings.person.tr(context),
-            ),
-            GButton(
               icon: Icons.menu,
               text: AppStrings.menu.tr(context),
+            ),
+            GButton(
+              icon: Icons.person,
+              text: AppStrings.person.tr(context),
             ),
           ]),
     );

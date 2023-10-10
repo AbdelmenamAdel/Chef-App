@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget {
       this.iconData,
       this.height = 50,
       required this.text,
-      this.width = 140,
+      this.width = double.infinity,
       this.backgroundColor = AppColors.primary});
   @required
   String text;

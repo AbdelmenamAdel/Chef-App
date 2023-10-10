@@ -31,7 +31,7 @@
     "location":"الموقع",
     "update":"تحديث",
     "oldPassword":"كلمة المرور القديمة",
-    "addmeal":"إضافة وجبة",
+    "addmeal":"إضافة طبق للمينيو",
     "price":"السعر",
     "number":"رقم",
     "category":"الصنف",
@@ -45,8 +45,14 @@
     "musntBMt":"لا يجب أن يكون فارغ",
     "dsntTheSamePassword":"الباسورد غير متطابق",
     "sendCodeSuccessfully":"تفقد إيميلك",
-    "validCode":"من فضلك أدخل رقم كود صالح",
+    "validCode":"من فضلك أدخل رقم صالح",
     "changedSuccessfully":"تم تغيير الباسورد بنجاح",
     "person":"الملف الشخصي",
-    "menu":"المينيو"
+    "menu":"المينيو",
+    "cancel":"إلغاء",
+    "ok":"حسناً",
+    "dltMeal":"حذف الوجبة",
+    "gallery":"معرض الصور",
+    "camera":"الكاميرا",
+    "addToMenu":"إضافة للمينيو"
 }

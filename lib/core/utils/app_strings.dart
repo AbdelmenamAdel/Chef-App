@@ -49,5 +49,11 @@ class AppStrings {
   static const String validcode = 'wrong code';
   static const String person = 'person';
   static const String menu = 'menu';
+  static const String ok = 'ok';
+  static const String cancel = 'cancel';
+  static const String dltMeal = 'dltMeal';
   static const String changedSuccessfully = 'changedSuccessfully';
+  static const String camera = 'camera';
+  static const String gallery = 'gallery';
+  static const String addToMenu = 'addToMenu';
 }

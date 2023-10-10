@@ -1,5 +1,6 @@
 import 'package:chef/feature/auth/presentation/cubits/send_code/send_code_cubit.dart';
 import 'package:chef/feature/home/home_cubit/home_cubit.dart';
+import 'package:chef/feature/menu/presentation/cubit/menu_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -34,6 +35,9 @@ void main() async {
         ),
         BlocProvider<HomeCubit>(
           create: (context) => sl<HomeCubit>(),
+        ),
+        BlocProvider<MenuCubit>(
+          create: (context) => sl<MenuCubit>(),
         ),
       ],
       child: const MyApp(),

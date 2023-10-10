@@ -9,8 +9,8 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
   int currentIndex = 0;
   List<Widget> screens = [
-    const ProfileHomeScreen(),
     const MenuScreen(),
+    const ProfileHomeScreen(),
   ];
 
   //! changeIndex of nav bar in home screen

@@ -45,8 +45,14 @@
     "musntBMt":"mustn't be empty",
     "dsntTheSamePassword":"check that they are the same password",
     "sendCodeSuccessfully":"check your email",
-    "validCode":"please enter a valid code number",
+    "validCode":"please enter a valid number",
     "changedSuccessfully":"the password had been changed successfully",
     "person":"Profile",
-    "menu":"Menu"
+    "menu":"Menu",
+    "cancel":"cancel",
+    "ok":"confirm",
+    "dltMeal":"delete the meal",
+    "gallery":"Gallery",
+    "camera":"Camera",
+    "addToMenu":"Add to menu"
 }

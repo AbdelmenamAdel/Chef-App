@@ -5,6 +5,7 @@ import 'package:chef/feature/auth/presentation/cubits/chef/chef_cubit.dart';
 import 'package:chef/feature/auth/presentation/cubits/login/login_cubit.dart';
 import 'package:chef/feature/auth/presentation/cubits/send_code/send_code_cubit.dart';
 import 'package:chef/feature/home/home_cubit/home_cubit.dart';
+import 'package:chef/feature/menu/presentation/cubit/menu_cubit.dart';
 import 'package:dio/dio.dart';
 import '../database/cache/cache_helper.dart';
 import '../database/remote/dio_consumer.dart';
@@ -20,5 +21,6 @@ Future<void> initServiceLocator() async {
   sl.registerLazySingleton<LoginCubit>(() => LoginCubit(sl()));
   sl.registerLazySingleton<SendCodeCubit>(() => SendCodeCubit(sl()));
   sl.registerLazySingleton<AuthRepository>(() => AuthRepository());
-  sl.registerLazySingleton(() => HomeCubit());
+  sl.registerLazySingleton<HomeCubit>(() => HomeCubit());
+  sl.registerLazySingleton<MenuCubit>(() => MenuCubit());
 }
