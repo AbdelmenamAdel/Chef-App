@@ -4,6 +4,7 @@ import 'package:chef/core/database/remote/api_consumer.dart';
 import 'package:chef/core/database/remote/end_point.dart';
 import 'package:chef/core/errors/exception.dart';
 import 'package:chef/core/services/service_locator.dart';
+import 'package:chef/feature/menu/data/model/menu_model.dart';
 import 'package:dartz/dartz.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -39,6 +40,18 @@ class MenuRepository {
         EndPoints.getDeleteMealEndPoints(id),
       );
       return Right(response[Apikeys.message]);
+    } on ServerException catch (error) {
+      return Left(error.errorModel.errorMessage);
+    }
+  }
+
+  Future<Either<String, GetAllMealsModel>> getMeals() async {
+    try {
+      final response = await sl<ApiConsumer>().get(
+        EndPoints.getAllChefMealEndPoints(
+            sl<CacheHelper>().getData(key: Apikeys.id)),
+      );
+      return Right(GetAllMealsModel.fromJson(response));
     } on ServerException catch (error) {
       return Left(error.errorModel.errorMessage);
     }

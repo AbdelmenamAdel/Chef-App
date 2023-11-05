@@ -50,4 +50,5 @@ class Apikeys {
   static const String description = 'description';
   static const String mealImages = 'mealImages';
   static const String howToSell = 'howToSell';
+  static const String meals = 'meals';
 }
