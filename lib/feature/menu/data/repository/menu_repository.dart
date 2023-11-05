@@ -1,4 +1,5 @@
 import 'package:chef/core/common/pick_image.dart';
+import 'package:chef/core/database/cache/cache_helper.dart';
 import 'package:chef/core/database/remote/api_consumer.dart';
 import 'package:chef/core/database/remote/end_point.dart';
 import 'package:chef/core/errors/exception.dart';
@@ -24,6 +25,19 @@ class MenuRepository {
         Apikeys.howToSell: howToSell,
         Apikeys.mealImages: await uploadImageToApi(image),
       });
+      return Right(response[Apikeys.message]);
+    } on ServerException catch (error) {
+      return Left(error.errorModel.errorMessage);
+    }
+  }
+
+  Future<Either<String, String>> deleteMealFromMenu({
+    required String id,
+  }) async {
+    try {
+      final response = await sl<ApiConsumer>().post(
+        EndPoints.getDeleteMealEndPoints(id),
+      );
       return Right(response[Apikeys.message]);
     } on ServerException catch (error) {
       return Left(error.errorModel.errorMessage);

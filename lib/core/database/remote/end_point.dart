@@ -18,6 +18,10 @@ class EndPoints {
     return '$chefGet$id';
   }
 
+  static String getAllChefMealEndPoints(String id) {
+    return 'chef/get-chef/$id/meals';
+  }
+
   static String getUpdateMealEndPoints(String id) {
     return '$updateMeal$id';
   }
@@ -34,6 +38,7 @@ class Apikeys {
   static const String password = 'password';
   static const String phone = 'phone';
   static const String code = 'code';
+  static const String id = 'id';
   static const String brandName = 'brandName';
   // static const String frontId = 'frontId';
   // static const String backId = 'backId';

@@ -2,6 +2,7 @@ import 'package:chef/core/database/cache/cache_helper.dart';
 import 'package:chef/core/database/remote/end_point.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:jwt_decoder/jwt_decoder.dart';
 import '../../../../../core/errors/error_model.dart';
 import '../../../../../core/models/login_model.dart';
 import '../../../../../core/services/service_locator.dart';
@@ -42,6 +43,9 @@ class LoginCubit extends Cubit<LoginState> {
       (l) => emit(LoginErrorState(l)),
       (r) {
         loginModel = r;
+        Map<String, dynamic> decodedToken = JwtDecoder.decode(r.token);
+        sl<CacheHelper>()
+            .saveData(key: Apikeys.id, value: decodedToken[Apikeys.id]);
         sl<CacheHelper>().setData(key: Apikeys.token, value: r.message);
         emit(LoginSuccessState(r.token));
       },
