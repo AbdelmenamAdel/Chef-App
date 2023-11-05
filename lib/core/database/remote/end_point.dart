@@ -40,4 +40,9 @@ class Apikeys {
   // static const String profilPic = 'profilPic';
   static const String message = 'message';
   static const String token = 'token';
+  static const String price = 'price';
+  static const String category = 'category';
+  static const String description = 'description';
+  static const String mealImages = 'mealImages';
+  static const String howToSell = 'howToSell';
 }

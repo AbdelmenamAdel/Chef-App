@@ -123,46 +123,21 @@ class AddMealScreen extends StatelessWidget {
                           height: 16.h,
                         ),
                         //! Drop down field
-                        DropdownButton(
+                        DropdownButtonFormField(
                           isExpanded: true,
                           value: menuCubit.selectedItem,
                           hint: const Text('handle it dnt fotget'),
                           items: menuCubit.categoryList
                               .map((e) =>
-                                  const DropdownMenuItem(child: Text(e),
-                                  value:e
-                                  ))
+                                  DropdownMenuItem(value: e, child: Text(e)))
                               .toList(),
                           onChanged: (item) {
                             menuCubit.changeItem(item);
                           },
                         ),
-                        //! Quantity
-                        Row(children: [
-                          Row(children: [
-                            Radio(
-                                activeColor: AppColors.primary,
-                                groupValue: menuCubit.groupValue,
-                                value: 'quantity',
-                                onChanged: (value) {
-                                  menuCubit.changeGroupValue(value);
-                                },),
-                            Text('quantity edit'.tr(context))
-                          ],),
-                          const Spacer(),
-                          Row(
-                            children: [
-                              Radio(
-                                  activeColor: AppColors.primary,
-                                  groupValue: menuCubit.groupValue,
-                                  value: 'number',
-                                  onChanged: (value) {
-                                    menuCubit.changeGroupValue(value);
-                                  },),
-                            ],
-                          ),
-                          Text('number edit'.tr(context)),
-                        ],),
+                        SizedBox(
+                          height: 16.h,
+                        ),
                         //! description of meal
                         CustomTextField(
                           hintText: AppStrings.description.tr(context),
@@ -177,7 +152,41 @@ class AddMealScreen extends StatelessWidget {
                         ),
                         SizedBox(
                           height: 16.h,
+                        ), //! Quantity
+                        Row(
+                          children: [
+                            Row(
+                              children: [
+                                Radio(
+                                  activeColor: AppColors.primary,
+                                  groupValue: menuCubit.groupValue,
+                                  value: 'quantity',
+                                  onChanged: (value) {
+                                    menuCubit.changeGroupValue(value);
+                                  },
+                                ),
+                                Text(
+                                  'quantity'.tr(context),
+                                )
+                              ],
+                            ),
+                            const Spacer(),
+                            Row(
+                              children: [
+                                Radio(
+                                  activeColor: AppColors.primary,
+                                  groupValue: menuCubit.groupValue,
+                                  value: 'number',
+                                  onChanged: (value) {
+                                    menuCubit.changeGroupValue(value);
+                                  },
+                                ),
+                              ],
+                            ),
+                            Text('number'.tr(context)),
+                          ],
                         ),
+
                         //! Add To Menu button
                         // state is LoginLoadingState
                         //     ? const CustomLoadingIndicator()
